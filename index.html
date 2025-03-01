@@ -5,10 +5,11 @@
         </style>
     </head>
     <body>
-        <p id="demo">my name is sachin sharma</p>
+        <p id="demo"></p>
+        <p id="demo1"></p>
 
         <script>
-            // let cars = ['bmw', 'volvo', 'oddy'];
+            let cars = ['bmw', 'volvo', 'oddy'];
             // document.getElementById('demo').innerHTML = cars;
            
             // let sachin = cars[0];
@@ -26,11 +27,46 @@
 
             // document.getElementById('demo').innerHTML = cars.toString();
 
-            let arr = [1,2,3,4];
+            // let arr = [1,2,3,4];
             
             // document.getElementById('demo').innerHTML = arr;
 
-            
+            // arr.forEach((item, index, arr)=>{
+            //     console.log(item,index);
+            // });
+
+
+            let lastOne = cars.pop(); //pop() method removes last element in array
+            document.getElementById('demo').innerHTML = lastOne;
+            let secondLast = cars[cars.length-1];
+            console.log(secondLast);
+            console.log(cars.length);
+
+            cars.push("Hammer"); //push() method add new element in end of the array
+
+            document.getElementById('demo').innerHTML = cars;
+
+            cars.shift(); //shift() method remove elements from the begining of the array
+            document.getElementById('demo').innerHTML = cars;
+
+            cars.unshift("Defender"); //unshift() method add new element to the begning of the array
+            document.getElementById('demo').innerHTML = cars;
+
+            // concat(): Create a new array by merging existing arrays
+            let cars1 = ["ev", "fortuner"];
+            cars = cars.concat(cars1);
+            document.getElementById('demo').innerHTML = cars;
+
+            // sort(): sort the entire array into ascending array 
+
+            let num = [1,4,2,4,3,7,5,6];
+            num.sort();
+            document.getElementById('demo').innerHTML = num;
+
+            // After sort an array we can easily sort it in descending order with the help of reverse() method;
+            num.reverse();
+            document.getElementById('demo1').innerHTML = num;
+
 
         </script>
     </body>
